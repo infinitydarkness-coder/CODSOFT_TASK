@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.calculator {
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 350px;
+    border: 1px solid #444;
+}
+
+.display {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 30px 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    font-size: 1.2rem;
+    color: #888;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+
+button {
+    height: 65px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3d3d3d;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    user-select: none;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(2px);
+    filter: brightness(90%);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+.equals {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Specific colors for special buttons */
+button:first-child { /* AC */
+    background-color: #ef4444;
+}
+button:nth-child(2) { /* DEL */
+    background-color: #6b7280;
+}
